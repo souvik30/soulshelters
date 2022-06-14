@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+.op{
+   margin-left: 30%;
+}
+.navbar-brand{
+    font-size: 2rem; 
+    font-weight: 400; 
+	color: black;
+	font-family: 'Rubik Wet Paint', cursive;
+
+}
+.nav-link{
+    font-size: 1.65rem;
+    font-weight: 1000;
+	color: black;
+	font-family: 'Indie Flower', cursive;
+}
+.agile-link-bnr {
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 15px;
+	background: #ff9108;
+	border: none;
+	border-radius: 30px;
+}
+.navBar-sticky{
+	position :sticky;
+    top: 0%;
+    z-index: 999;
+    background-color: #242526;
+    box-shadow: 10px 10px 20px grey ;
+    border: 1px solid gray;
+    border-radius: 15% 15%;
+}
+@media screen and (max-width: 600px){
+	.op{
+		margin-left: 72%;
+	 }
+	.nav-link{
+		font-size: 1.65rem;
+		font-weight: 1000;
+		color: #ff9108;
+		font-family: 'Indie Flower', cursive;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Rubik+Wet+Paint&display=swap');
+.banner {
+	background: center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	position: relative;
+	height: 75vh;
+}
+.banner-text {
+	padding: 14vw 0;
+	box-sizing: border-box;
+	position: absolute;
+	top: -6%;
+	text-align: left;
+    width: 600px;
+    margin-right: auto;
+	font-family: 'Rubik Wet Paint', cursive;
+}
+
+.slider-info {
+    text-align: left;
+    width: 600px;
+    margin-right: auto;
+}
+ h3 {
+	font-size: 2.25rem;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 400;
+}
+ h5{
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 400;
+} 
+
+.agile-link-bnr {
+	padding: 15px 80px;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 17px;
+	background: #ff9108;
+	border: none;
+	border-radius: 30px;
+	font-family: sans-serif;
+}
+
+.agile-link-cnt {
+	padding: 15px 40px;
+	color: #fff;
+	letter-spacing: 2px;
+	font-size: 16px;
+	background: #ff9108;
+	border: none;
+	border-radius: 30px;
+	text-transform: uppercase;
+}
+.modal-content{
+	font-weight: 700;
+}
+@media screen and (max-width: 600px){
+	.banner-text {
+		padding: 14vw 0;
+		box-sizing: border-box;
+		position: absolute;
+		top: 30%;
+		text-align: left;
+		width: 400px;
+		margin-right: auto;
+		font-family: 'Rubik Wet Paint', cursive;
+	}
+	.agile-link-bnr {
+		padding: 10px 40px;
+		color: #fff;
+		font-weight: 600;
+		letter-spacing: 1px;
+		font-size: 17px;
+		background: #ff9108;
+		border: none;
+		border-radius: 30px;
+		font-family: sans-serif;
+	}
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Rubik+Wet+Paint&display=swap');
+
+section.wthree-row{
+  position: relative;
+}
+.heading-agileinfo {
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 40px;
+  text-align: center;
+  color: #000;
+  text-transform: capitalize;
+  position: relative;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+.heading-agileinfo span {
+  color: #ff9108;
+  font-family: 'Rubik Wet Paint', cursive;
+  font-weight: 400;
+}
+.card-title {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+  color: #ff9108;
+  font-family: 'Pacifico', cursive;
+}
+.ab_button a {
+  padding: 0.7em 2em;
+  color: #fff;
+  font-size: 14px;
+background: #ff9108;
+  border: 2px solid #ff9108;
+display: block;
+  border-radius: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.card-text{
+  font-family: 'Pacifico', cursive;
+}
+@media screen and (max-width: 600px){
+  .pre-card{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+#testimonials {
+    background : no-repeat cover ;
+    padding-top: 1%;
+    padding-bottom: 0%;
+  }
+  
+  .testimonial-text {
+    color: #fff;
+    width: 60%;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 1000;
+  }
+  
+  .testimonial-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  .content{
+      font-display: center;
+  }
+  .clients {
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: relative;
+    height: 77vh;
+  }
+  .clients label.line{
+  background:#000;
+  }
+  .heading-agileinfo span {
+    color: #ff9108;
+  }
+  .clients_img {
+    padding: 1em;
+  }
+  section.slider {
+    width: 72%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 600px){
+    .testimonial-text {
+      color: #fff;
+      width: 40%;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-family: 'Indie Flower', cursive;
+      font-weight: 1000;
+      
+    }
+    .testimonial-image {
+      width: 35%;
+      height: 45%;
+      border-radius: 100%;
+      margin: 20px;
+    }
+  }
+  
+
+
+  #footer{
+    background-color: #242526;
+}
+.footer_grid1 span {
+    color: #ff9108;
+    line-height: 1.5;
+}
+
+.list-unstyled li span {
+    color: #fff;
+    font-weight: 600;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+#footer h5 {
+    margin-bottom: 25px;
+    color:#ff9108;
+    text-transform: capitalize;
+    font-size: 1.4em;
+}
+
+#footer ul.social li {
+    padding: 3px 0;
+}
+
+.footer-logo h2 a {
+    color: #ff9108;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    display: block;
+    padding: 0.5em 0;
+}
+.footer-logo p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-logo h2 a span {
+    display: block;
+    font-size: 0.5em;
+    text-transform: capitalize;
+    color: #000;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size: 25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.social li:hover a i {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#footer ul.social li a,
+#footer ul.quick-links li a {
+    color: #fff;
+}
+
+#footer ul.social li a:hover {
+    color: #eeeeee;
+}
+
+#footer ul.quick-links li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    color: #fff;
+}
+
+#footer ul.quick-links li a:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+#footer ul.quick-links li a i {
+    margin-right: 5px;
+    color: #ff9108;
+}
+
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+fv3-contact span {
+    color: #56ab2f;
+    font-size: 1.2em;
+    display: inline-block;
+    background: #eee;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.fv3-contact p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 15px;
+}
+
+.fv3-contact p a {
+    color: #fff;
+}
+.cpy-right {
+    background: #000;
+}
+.cpy-right {
+    color: #fff;
+    letter-spacing: 1px;
+}
+.cpy-right a{
+    color: #ff9108; 
+}
+.cpy-right a:hover {
+    color: #fff;
+    
+}
+@media (max-width:767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+}
+.social-media i{
+    color: #ff9108;
+}
+
+/*-- footer */
+
+
+.Log{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(76, 76, 182),rgb(206, 19, 206));
+  height: 100vh;
+  width: 100vw;
+}
+.content{
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color:azure;
+  height: 50vh;
+  width: 30vw;
+  box-shadow: 20px 20px 30px;
+  
+}
+.but{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.searchpage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
+.topbar{
+  width: 100%;
+  height: 50PX;
+  background-color: rgb(241, 237, 237);
+  position :sticky;
+  top: 0%;
+  z-index: 999;
+  box-shadow: 10px 10px 20px grey ;
+  border: 1px solid gray;
+  border-radius: 15% 15%;
+}
+.topbarWrapper{
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  font-weight: bold;
+  font-size: 1rem;
+  color: orangered;
+  cursor: pointer;
+}
+.topbarRight{
+  display: flex;
+  align-items: center;
+}
+.topbarIconContainer{
+  position: relative;
+}
+.topbarIconBadge{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top:-5px;
+  right:0px;
+  background-color: orangered;
+  color: aliceblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.topAvatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.searchresultPage{
+  background-image: url(/public/image/banner.jpg);
+  height: 100vh;
+}
+.contents{
+ 
+  padding: 2%;
+  padding-top: 0%;
+
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color:azure;
+  height: 50vh;
+  width: 30vw;
+  box-shadow: 20px 20px 30px;
+  
+}

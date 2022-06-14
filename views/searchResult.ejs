@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/searchResultPage.css">
+    <script src="js/searchResult.js"></script>
+    <title>Search Results</title>
+</head>
+<body style="background-image: url(/image/banner.jpg);">
+    <a id="ooo" href="/home">Home</a>
+    <button onclick="sortTable()"id="sort">Sort by Price</button>
+    <h1 style="text-align: center;">Search <span class="op"> Result</span></h1>
+    
+    <div class="header_fixed">
+                <table id="myTable">
+                    <tr>
+                        <th hidden>Id</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Email </th>
+                        <th>Address</th>
+                        <th>Area</th>
+                        <th>State</th>
+                        <th>City</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th>Price</th>
+                        <th>Laundry</th>
+                        <th>Wifi</th>
+                        <th>Food</th>
+                        <th>Cleaner</th>
+                        <th>Security</th>
+                        
+                        
+                    </tr>
+
+                    <% if(Properties.length!=0){ var i=1; Properties.forEach(function(data){ %>
+                        <tr>
+                            <td hidden>
+                                <%=data.id %>
+                            </td>
+                            <td>
+                                <img src="uploads/<%=data.image %> " alt="Not Found" class="searchImage">
+                            </td>
+                            <td>
+                                <%=data.name %>
+                            </td>
+                            <td>
+                                <%=data.email%>
+                            </td>
+                            <td>
+                                <%=data.address %>
+                            </td>
+                            <td>
+                                <%=data.area %>
+                            </td>
+                            <td>
+                                <%=data.state %>
+                            </td>
+                            <td>
+                                <%=data.city %>
+                            </td>
+                            <td>
+                                <%=data.phone %>
+                            </td>
+                            <td>
+                                <%=data.genders %>
+                            </td>
+                            <td>
+                                <%=data.price %>
+                            </td>
+                            <td>
+                                <%=data.laundry %>
+                            </td>
+                            <td>
+                                <%=data.wifi%>
+                            </td>
+                            
+                            <td>
+                                <%=data.food %>
+                            </td>
+                            <td>
+                                <%=data.cleaner %>
+                            </td>
+                            <td>
+                                <%=data.security %>
+                            </td>
+                            
+                            
+                        </tr>
+                        <% i++; }) %>
+                            <% } else{ %>
+                                <tr>
+                                    <td colspan="7">No Data Found</td>
+                                </tr>
+                                <% } %>
+                </table>
+    </div>
+</body>
+</html>

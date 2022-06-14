@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" />
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+<link rel="stylesheet " type="text/css " href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" />
+<head>
+    <title>Property Registration</title>
+</head>
+<body>
+    <script src="js/registration.js "></script>
+    <script src="js/cities.js"></script>
+    <div class="container ">
+
+        <form class="well form-horizontal " action="/property" method="post" id="contact_form " enctype="multipart/form-data">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>
+                    <center>
+                        <h2><b>PROPERTY REGISTRATION</b></h2>
+                    </center>
+                </legend><br>
+
+                <!-- Text input-->
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Property Name</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-home "></i></span>
+                            <input name="name" id="name" placeholder=" Name " class="form-control " type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Contact No.</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-earphone "></i></span>
+                            <input name="phone" id = "phone" placeholder="(+91) " class="form-control " type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Email</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="	glyphicon glyphicon-envelope "></i></span>
+                            <input name="email" id="email" placeholder="email " class="form-control" value="<%=email%>" type="text" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Address</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-map-marker "></i></span>
+                            <input name="address" id="address" placeholder=" Address " class="form-control " type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Area/Street</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-map-marker "></i></span>
+                            <input name="area" id="area" placeholder="Area/Street" class="form-control " type="text" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">States</label>
+                    <div class="col-md-4 selectContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-list "></i></span>
+                            <select onchange="print_city('city', this.selectedIndex);" id="state" name ="state" class="form-control" required></select>
+                            <select id ="city" name="city" class="form-control" required></select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Price</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "> &#8377</span>
+                            <input name="price" placeholder="price per month " class="form-control " type="text " required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Upload Photo</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-picture "></i></i></span>
+                            <input name="image" id="image" class="form-control"" type="file">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">Gender</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input_field radio_option">
+                            <input type="radio" name="genders" id="rd1" value="Male">
+                            <label for="rd1">Male</label>
+                            <input type="radio" name="genders" id="rd2" value="Female">
+                            <label for="rd2">Female</label>
+                            <input type="radio" name="genders" id="rd3" value="Uni">
+                            <label for="rd2">Uni</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-8 control-label ">
+                    <div>
+                        <input type="checkbox" id="laundry" name="laundry" value="Yes">
+                        <label for="laundry">Laundry</label>
+                        <input type="checkbox" id="cb2" name="wifi" value="yes">
+                        <label for="cb2">WI-Fi</label>
+                        <input type="checkbox" id="cb3" name="food" value="yes">
+                        <label for="cb3">Food</label>
+                        <input type="checkbox" id="cb4"name="cleaner" value="yes">
+                        <label for="cb4">Cleaner</label>
+                        <input type="checkbox" id="cb5" name="security" value="yes">
+                        <label for="cb5">Security</label>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="col-md-10 control-label ">
+                    <label class="col-md-4 control-label "></label>
+                    <div class="col-md-4 "><br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="submit " class="btn btn-warning ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send "></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    </div>
+    <script language="javascript">print_state("state");</script>
+    <!-- /.container -->
+</body>
+
+</html>

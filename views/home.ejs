@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/searchPage.js "></script>
+    <script src="js/cities.js"></script>
+    
+</head>
+
+<body>
+    <div class="searchPage"
+        style="background-image: url(/image/bg4.jpg);height: 100vh; background-size: cover  ;background-repeat: no-repeat;">
+        <div class="contents" style="height: 95vh; width: 160vh;">
+            <div class="navBar-sticky my-5">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Soul Shelter</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse op" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link mx-3"> <%= username %></a>
+                                </li>
+                                <% if( user_type == 'puser')
+                                { %>
+                                    <li class="nav-item">
+                                        <a href="/registerproperty" class="nav-link mx-3"> Register Property</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/myproperties" class="nav-link mx-3"> My Properties</a>
+                                    </li>
+                                    <% } %>
+                                <li class="nav-item">
+                                    <a href="/logout" class="nav-link mx-3"> Logout</a>
+                                </li>
+                                    
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="filter" style="border: 1.75px solid black; border-radius: 15%;padding: 2%; height: 58vh;margin: 0%;">
+                <form action="/sproperty" method="post">
+                    <div class="row my-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Select State :</label>
+                            <select onchange="print_city('city', this.selectedIndex);" id="state" name ="state" class="form-control" required></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Select City :</label>
+                            <select id ="city" name="city" class="form-control" required></select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label">Enter Area/Street :</label>
+                        <input type="text" class="form-control" id="area" name="area" placeholder="Enter Area" required>
+                        <small id="errorCity" style="color: red;"></small>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label">Laundry :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="yes" id="laundry" name="laundry">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">WiFi :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="yes" id="wifi" name="wifi">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Food :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="yes" id="food" name="food">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Cleaners :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="yes" id="cleaner" name="cleaner">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Security :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="yes" id="security" name="security">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">Gender :</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genders" value="Female"
+                                    >
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Female
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genders" value="Male"
+                                    >
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genders" value="Uni"
+                                    >
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Uni
+                                </label>
+                            </div>
+                            <small id ="errorGender" style="color: red;"></small>
+                        </div>
+                    </div>
+                    <div class='but'>
+                        <button type="submit" class='btn btn-primary btn-lg mt-2 agile-link-bnr'
+                            id="searchButton">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script language="javascript">print_state("state");</script>
+</body>
+
+</html>
