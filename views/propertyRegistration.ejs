@@ -8,7 +8,7 @@
     <title>Property Registration</title>
 </head>
 <body>
-    <script src="js/registration.js "></script>
+    <script src="/js/registration.js "></script>
     <script src="js/cities.js"></script>
     <div class="container ">
 
@@ -74,6 +74,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group ">
+                    <label class="col-md-4 control-label ">GPS</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input-group ">
+                            <span class="input-group-addon "><i class="glyphicon glyphicon-map-marker "></i></span>
+                           <button class="form-control" id="gLocation" onclick="getLocation()">Permission for GPS location</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" id="latitude" name="latitude" hidden>
+                <input type="text" id="longitude" name="longitude" hidden>
 
                 <div class="form-group ">
                     <label class="col-md-4 control-label ">States</label>
@@ -120,6 +131,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="form-group ">
+                    <label class="col-md-4 control-label ">Property Type</label>
+                    <div class="col-md-4 inputGroupContainer ">
+                        <div class="input_field radio_option">
+                            <input type="radio" name="pt" id="pt1" value="PG">
+                            <label for="pt1">PG</label>
+                            <input type="radio" name="pt" id="pt2" value="Mess">
+                            <label for="pt2">Mess</label>
+                            <input type="radio" name="pt" id="pt3" value="House">
+                            <label for="pt3">House</label>
+                        </div>
+                    </div>
+                </div> -->
 
 
 

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $("#contact_form")
         .bootstrapValidator({
             // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -88,7 +88,7 @@ $(document).ready(function() {
                 }
             }
         })
-        .on("success.form.bv", function(e) {
+        .on("success.form.bv", function (e) {
             $("#success_message").slideDown({ opacity: "show" }, "slow"); // Do something ...
             $("#contact_form").data("bootstrapValidator").resetForm();
 
@@ -105,10 +105,22 @@ $(document).ready(function() {
             $.post(
                 $form.attr("action"),
                 $form.serialize(),
-                function(result) {
+                function (result) {
                     console.log(result);
                 },
                 "json"
             );
         });
 });
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("latitude").value = position.coords.latitude ;
+    document.getElementById("longitude").value = position.coords.longitude ;
+}

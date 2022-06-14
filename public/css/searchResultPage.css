@@ -110,7 +110,7 @@ td button {
    width: 200px; 
    height: 150Px;
 }
-#ooo{
+.ooo{
     color: #fff;
 	font-weight: 600;
     padding-top: 0.5%;
@@ -197,4 +197,11 @@ td button {
   #overlay.active {
     opacity: 1;
     pointer-events: all;
+  }
+  .maplink{
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: #e6e7e8;
   }

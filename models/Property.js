@@ -4,6 +4,8 @@ const Property= new mongoose.Schema({
     email:{ type: String, required: true },
     address:{ type: String, required: true },
     area:{ type: String, required: true},
+    latitude:{type:String, required:true},
+    longitude:{type:String, required:true},
     state:{ type: String, required: true },
     city:{ type: String, required: true},
     image:{ type: String, required: true },

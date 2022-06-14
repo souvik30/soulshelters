@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/searchResultPage.css">
+    <title>Document</title>
+</head>
+
+<body style="background-image: url(image/bg4.jpg);">
+    <h1 style="text-align: center;">Location <span class="op"> In Map</span></h1>
+    <div id="map" style=" position:absolute;top: 20%; height: 77vh; width:220vh"></div>
+
+
+
+
+    <script>
+function initMap() {
+  const pos = { lat: parseFloat("<%=position.latitude%>"), lng:parseFloat("<%=position.longitude%>")};
+  console.log(JSON.stringify(pos));
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: pos,
+  });
+  const marker = new google.maps.Marker({
+    position: pos,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+    </script>
+     <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJcsZorlF5DZziUH0egyJJzpbcrnY3nQ4&callback=initMap&v=weekly"
+     defer
+   ></script>
+</body>
+
+</html>
