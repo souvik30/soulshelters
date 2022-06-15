@@ -18,6 +18,7 @@
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "express-mongo-sanitize": "^2.2.0",
     "express-session": "^1.17.2",
     "mime-types": "^2.1.35",
     "mongoose": "^6.2.1",

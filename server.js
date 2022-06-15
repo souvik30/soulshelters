@@ -1,4 +1,5 @@
 var express = require('express');
+const mongoSanitize = require('express-mongo-sanitize');
 const mime = require('mime-types')
 var multer	=	require('multer');
 const mongoose = require('mongoose');
@@ -30,7 +31,14 @@ app.get('/', function(req, res) {
 });
 app.use(cookieparser());
 
-
+app.use(
+    mongoSanitize({
+      allowDots: true,
+      onSanitize: ({ req, key }) => {
+        console.warn(`This request[${key}] is sanitized`, req);
+      },
+    }),
+  );
 
 //NODEMAILER TEST ACCOUNT CREATION
 
@@ -106,6 +114,18 @@ app.use(session({
 
 app.post('/signup', async function(req, res) {
     //console.log(req.body);
+    console.log(req.body.otp, req.session.otp);
+    const {otp} = req.body;
+    const email= req.session.email;
+    if (req.session.otp != otp) {
+        //console.log("otp verified");
+        return res.render('../views/index', { message: 'OTP Verification Failed' });
+    }
+    req.session.destroy((err) => {
+        if (err) {
+            return console.log(err);
+        }
+    });
     const { name, signupemail, user_type, password } = req.body;
     const checkEmail = await User.findOne({ email: signupemail });
     if (checkEmail) {
@@ -261,14 +281,13 @@ app.post('/signin', async function(req, res) {
 
 //VERIFY EMAIL
 
-
-app.post('/email/verify', async function(req, res) {
-    if(!req.body.email || !req.body.password){
+app.post('/emailverify', async function(req, res) {
+    if(!req.body.signupemail || !req.body.password){
         return res.status(400).json({error:"Email and password are required"});
         }
             const userdata=req.body;
-            console.log(req.body.email);
-            const email = req.body.email;
+            console.log(req.body.signupemail);
+            const email = req.body.signupemail;
             const otp = Math.floor(100000 + Math.random() * 900000);
             req.session.otp = otp;
             req.session.email = email;
@@ -288,7 +307,7 @@ app.post('/email/verify', async function(req, res) {
         <head>
             <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
             <title>OTP to Reset Password</title>
-            <meta name="description" content="Reset Password Email Template.">
+            <meta name="description" content="Verify Email Template.">
             <style type="text/css">
                 a:hover {
                     text-decoration: underline !important;
@@ -329,8 +348,7 @@ app.post('/email/verify', async function(req, res) {
                                             <td style="padding:0 35px;">
                                                 <h1
                                                     style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">
-                                                    You have
-                                                    requested to reset your password</h1>
+                                                    Thanks for Signing Up on Soulshelters! Please enter the OTP to verify your account</h1>
                                                 <span
                                                     style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
                                                 <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
@@ -392,7 +410,11 @@ app.post('/email/verify', async function(req, res) {
     }
     );
 
+//TEST FOR VERIFICATION OF OTP
 
+app.get('/otptest', function(req, res) {
+    res.render('../views/verifyemail');
+});
 
 
 //Property Registration 

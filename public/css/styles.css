@@ -112,6 +112,9 @@
 	font-weight: 700;
 }
 @media screen and (max-width: 600px){
+  .navbar-brand{
+    font-size: 1rem;
+  }
 	.banner-text {
 		padding: 14vw 0;
 		box-sizing: border-box;
@@ -121,11 +124,19 @@
 		width: 400px;
 		margin-right: auto;
 		font-family: 'Rubik Wet Paint', cursive;
+    
 	}
+  .banner-text h3{
+    font-size: 1.15rem;
+  }
+  .banner-text h5{
+    font-size: 0.75rem;
+  }
 	.agile-link-bnr {
-		padding: 10px 40px;
+		padding: 5px 20px;
 		color: #fff;
-		font-weight: 600;
+		font-weight: 300px;
+    font-size: 1rem;
 		letter-spacing: 1px;
 		font-size: 17px;
 		background: #ff9108;
@@ -500,8 +511,59 @@ fv3-contact span {
   border: 1px solid black;
   border-radius: 5%;
   background-color:azure;
-  height: 50vh;
-  width: 30vw;
+  height: 95vh; width: 160vh;
   box-shadow: 20px 20px 30px;
   
+}
+.filter{
+  border: 1.75px solid black;
+   border-radius: 15%;
+   padding: 2%; 
+   height: 58vh;
+   margin: 0%;
+}
+.searchpage{
+  height: 100vh; background-size: cover  ;background-repeat: no-repeat;
+}
+.contentSign{
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 5%;
+  background-color:azure;
+  height: 85vh;
+  width: 30vw;
+  box-shadow: 20px 20px 30px;
+}
+@media screen and (max-width: 500px) and (min-width:381px) {
+  .searchPage{
+    height: 125vh; background-size: cover  ;background-repeat: no-repeat;
+  }
+  .contents{
+    height: 115vh;
+  }
+  .filter{
+    height: 93vh;
+  }
+  .content{
+    height: 10vh;
+    width: 40vw;
+  }
+  .banner-text{
+    font-size: 0.75rem;
+  }
+  .content{
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .searchPage{
+    height: 170vh; background-size: cover  ;background-repeat: no-repeat;
+  }
+  .filter{
+    height: 108vh;
+  }
+  .contents{
+    height: 133vh; 
+  }
 }

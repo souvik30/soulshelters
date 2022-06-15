@@ -1,22 +1,40 @@
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<div class="Log">
-  <form action="/email/verify" method="POST" class="form-horizontal">
-    <div class="content" style="height: 55vh;">
-      <div class="col-md-12">
-        <label htmlFor="" class="form-label">Enter OTP :</label>
-        <input name="otp" type="text" class="form-control" placeholder="OTP" required autocomplete="off"  />
-        <input name="name"type="text" id="name" value="<%=userdata.name%>" hidden>
-        <input name="email"type="text"id="email" value="<%=userdata.email%>"hidden>
-        <input name="password" type="text"id="password"value="<%=userdata.password%>" hidden>
-        <input name="user_type" type="text" id="usertype"value="<%=userdata.user_type%>" hidden>
-      </div>
-      
-      <div class='but'>
-        <button type="submit" class='btn btn-primary mt-4 agile-link-bnr'>Reset Password</a></div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-  </form>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="Log">
+    <form action="/signup" method="POST" class="form-horizontal">
+      <div class="content" style="height: 25vh;">
+        <div class="col-md-12">
+          <label htmlFor="" class="form-label">Enter OTP :</label>
+          <input name="otp" type="text" class="form-control" placeholder="OTP" required autocomplete="off" />
+          <input name="name" type="text" id="name" value="<%=userdata.name%>" hidden>
+          <input name="signupemail" type="text" id="signupemail" value="<%=userdata.signupemail%>" hidden>
+          <input name="password" type="text" id="password" value="<%=userdata.password%>" hidden>
+          <input name="user_type" type="text" id="usertype" value="<%=userdata.user_type%>" hidden>
+        </div>
+
+        <div class='but'>
+          <button type="submit" class='btn btn-primary mt-4 agile-link-bnr'>Verify Email</a>
+        </div>
+      </div>
+
+    </form>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

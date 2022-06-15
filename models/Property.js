@@ -8,6 +8,7 @@ const Property= new mongoose.Schema({
     longitude:{type:String, required:true},
     state:{ type: String, required: true },
     city:{ type: String, required: true},
+    propertyType:{ type: String, required: true},
     image:{ type: String, required: true },
     phone:{ type: Number, required: true},
     laundry:{ type: String, required: true},

@@ -8,8 +8,8 @@ function sortTable() {
     rows = table.rows;
     for (i = 1; i < (rows.length - 1); i++) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[10];
-      y = rows[i + 1].getElementsByTagName("TD")[10];
+      x = rows[i].getElementsByTagName("TD")[11];
+      y = rows[i + 1].getElementsByTagName("TD")[11];
       if (dir == "asc") {
         if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
           shouldSwitch = true;
